@@ -38,11 +38,13 @@ class BookController extends Controller
         return response()->json($book);
     }
     public function getOnSale(){
+        //get list book on sale
         $books = $this->bookRepository->getOnSale();
         return response()->json(new BookCollection($books), 200);
     }
 
     public function getPopular(){
+        //get list book popular
         $books = $this->bookRepository->getPopular();
         return response()->json(new BookCollection($books), 200);
     }
