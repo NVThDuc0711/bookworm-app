@@ -1,8 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Welcome from './welcome';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-ReactDOM.render(
-  <Welcome/>,
-  document.getElementById('root')
-);
+
+
+import 'bootstrap/dist/css/bootstrap.css';
+
+function App(){
+    console.log('Duc');
+}
+
+export default App;
