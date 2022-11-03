@@ -18,10 +18,7 @@ class ProductController extends Controller
 
     public function show(Request $request)
     {
-        $validate = $this->productRepository->validateIDBook($request->id);
-        if($validate){
-            $bookDetail = $this->productRepository->getProductById($request->id);
-        }
-        return response()->json(new DetailResource($bookDetail), 200);
+        $bookDetail = $this->productRepository->getProductById($request -> id);
+        return new DetailResource($bookDetail);
     }
 }

@@ -53,4 +53,12 @@ class BookController extends Controller
         $books = $this->bookRepository->getRecommended();
         return response()->json(new BookCollection($books), 200);
     }
+    public function getFeatured(){
+        // Featured books is popular books and recommended books
+        $books = [
+            'popular' => new BookCollection($this->bookRepository->getPopular()),
+            'recommended' => new BookCollection($this->bookRepository->getRecommended())
+        ];
+        return response() -> json($books);
+    }
 }

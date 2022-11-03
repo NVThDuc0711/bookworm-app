@@ -24,6 +24,9 @@ class OrderController extends Controller
     {
         $params = $this->orderRepository->filterParams($request);
         $order = $this->orderRepository->createOrder(...$params);
+        
+        $order['status'] = 201;
+
         return response()->json($order, 201);
     }
 }

@@ -39,4 +39,13 @@ class ReviewController extends Controller
         }
         return response()->json($review, 200);
     }
+
+    public function getRating(FilterReviewsRequest $request){
+        $respone = [
+            'rating_avg' => $this -> productRepository -> getRatingAvg($request -> book_id),
+            'count_stars' => $this -> productRepository -> getCountStars($request -> book_id)
+        ];
+
+        return response()->json($respone, 200);
+    }
 }
