@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\FilterRequest;
 use App\Respositories\ShopRepository;
 use App\Http\Resources\BookCollection;
+use App\Http\Resources\FilterResource;
 
 class ShopController extends Controller
 {

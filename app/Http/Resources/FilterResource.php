@@ -3,7 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-
+use App\Models\Category;
+use App\Models\Author;
 class FilterResource extends JsonResource
 {
     /**
