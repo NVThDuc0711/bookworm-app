@@ -6,7 +6,7 @@ function About() {
         <Container className="bookworm__about">
 
             <div>
-                <h2>About Us</h2>
+                <h2>About Us | Bookworm</h2>
                 <hr />
             </div>
 

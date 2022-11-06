@@ -9,7 +9,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(247, 250, 252);
+    background: #290b29;
 }
 
 .welcome-text {

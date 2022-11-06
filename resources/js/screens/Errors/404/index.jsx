@@ -3,7 +3,9 @@ function Error404() {
       <div>
         <h1>404 ERROR !</h1>
         <p>Page can not found</p>
+        <p>Access Later </p>
       </div>
+      
     );
   }
   

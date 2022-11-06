@@ -15,8 +15,8 @@
         justify-content: center;
 
         button {
-            background-color: #fff;
-            color: #000;
+            background-color: #290b29;
+            color: yellow;
             font-size: 1.5rem;
             font-weight: 700;
             padding: 0.5rem 1rem;
@@ -26,14 +26,17 @@
             transition: all 0.15s ease-in-out;
     
             &:hover {
-                background-color: #000;
-                color: #fff;
+                background-color: yellow;
+                color: black;
+                border: 1px solid black;
             }
         }
 
         .bookworm__featured__tab--active{
-            background-color: #000;
-            color: #fff;
+            background-color: #290b29;
+            color: yellow;
+            
         }
+
     }
 }

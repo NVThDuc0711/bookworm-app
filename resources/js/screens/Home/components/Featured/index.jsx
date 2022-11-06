@@ -25,7 +25,7 @@ function Featured(){
     return (
         <React.Fragment>
             <Container className="bookworm__featured">
-                <h1>Featured Books</h1>
+                <h1>Books Featured</h1>
                 <div className="bookworm__featured__tabs py-2">
                     <button className={`${featured === 'recommended' ? 'bookworm__featured__tab--active' : ''}`} onClick={() => setFeatured('recommended')}>Recommended</button>
                     <button className={`${featured === 'popular' ? 'bookworm__featured__tab--active' : ''}`} onClick={() => setFeatured('popular')}>Popular</button>

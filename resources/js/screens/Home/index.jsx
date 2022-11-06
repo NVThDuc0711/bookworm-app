@@ -3,8 +3,8 @@ import { OnSale, Featured } from "./components";
 function Home(){
     return (
         <div className= "home " >
-            {/* <OnSale />
-            <Featured /> */}
+            <OnSale />
+            <Featured />
         </div>
     );
 }

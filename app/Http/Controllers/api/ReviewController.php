@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\FilterReviewsRequest;
 use App\Http\Requests\PostReviewRequest;
-use App\Http\Requests\PostReviewsRequest;
+use App\Http\Resources\ReviewCollection;
+
 use App\Respositories\ProductRepository;
 
 
