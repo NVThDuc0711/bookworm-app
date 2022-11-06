@@ -67,4 +67,27 @@ class BookRespository
             -> get();
         return new BookCollection($listBooks);
     }
+
+    public function getFinalPrice($query){
+        return $query -> leftjoin('discount', 'book.id', '=', 'discount.book_id')
+                      -> selectRaw('case
+                                    when now() >= discount.discount_start_date 
+                                    and (now() <= discount.discount_end_date or discount.discount_end_date is null) 
+                                    then discount.discount_price
+                                    else book.book_price
+                                end as final_price')
+                      -> groupBy('discount.discount_start_date', 'discount.discount_end_date', 'discount.discount_price');
+    }
+
+    public function getSubPrice($query){
+        return $query -> leftjoin('discount', 'book.id', '=', 'discount.book_id')
+                      -> selectRaw('case
+                                    when now() >= discount.discount_start_date 
+                                    and (now() <= discount.discount_end_date or discount.discount_end_date is null) 
+                                    then book.book_price - discount.discount_price
+                                    else 0
+                                end as sub_price')
+                      -> groupBy('discount.discount_start_date', 'discount.discount_end_date', 'discount.discount_price');
+    }
+    
 }

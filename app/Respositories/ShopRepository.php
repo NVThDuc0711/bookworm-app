@@ -25,13 +25,13 @@ class ShopRepository
                     -> selectRaw('case
                                     when now() >= discount.discount_start_date
                                     and (now() <= discount.discount_end_date
-                                    or discount.discount_end_date is null) then discount.discount_price 
+                                    or discount.discount_end_date is null) then book.book_price - discount.discount_price 
                                     else 0
-                                end as discount_price')
+                                end as sub_price')
                     -> selectRaw('case
                                     when now() >= discount.discount_start_date
                                     and (now() <= discount.discount_end_date
-                                    or discount.discount_end_date is null) then book.book_price - discount.discount_price 
+                                    or discount.discount_end_date is null) then discount.discount_price 
                                     else book.book_price
                                 end as final_price')
                     -> groupBy('book.id', 'discount.discount_price', 'discount.discount_start_date', 'discount.discount_end_date')
@@ -51,12 +51,12 @@ class ShopRepository
 
     private const SORT_BY_SALE = 'sale';
     private const SORT_BY_POPULAR = 'popular';
-    private const SORT_BY_PRICE_ASC = 'price_asc';
-    private const SORT_BY_PRICE_DESC = 'price_desc';
+    private const SORT_BY_PRICE_ASC = 'price-asc';
+    private const SORT_BY_PRICE_DESC = 'price-desc';
     public function sortBy($bookTable, $sortBy){
         switch($sortBy){
             case Self::SORT_BY_SALE:
-                $bookTable = $bookTable -> orderBy('discount_price', 'desc')
+                $bookTable = $bookTable -> orderBy('sub_price', 'desc')
                                         -> orderBy('final_price', 'asc');
                 break;
             case Self::SORT_BY_POPULAR:

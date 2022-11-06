@@ -30,6 +30,8 @@ class AuthRepository
             return response()->json([
                 'access_token' => $token,
                 'token_type' => 'Bearer',
+                'user' => $user,
+                'status' => 200,
             ]);
         }
 
@@ -42,9 +44,9 @@ class AuthRepository
     {
         $user = Auth::user();
         $user->tokens()->delete();
-
         return response()->json([
             'message' => 'Logged out',
+            'status' => 200,
         ]);
     }
 }
