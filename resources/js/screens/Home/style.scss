@@ -3,13 +3,17 @@
 
     
     .card__custom {
-        background-color: yellow;
+        background-color: white;
         color: #290b29;
         width: 20rem;
         height: 40rem !important;
-
+        margin-right: 20px;
         .card__custom__img{
             height: 350px !important;
+        }
+        &:hover{
+            background-color: #290b29;
+            color: yellow;
         }
     }
 

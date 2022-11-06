@@ -55,8 +55,8 @@ function OnSale(){
                     <DropdownButton className='bookworm__onsale_button' drop='end' title='View All' onClick={() => {navigate('/shop')}}/>
                 </div>
             </Container>
-            <Container className="p-12 mt-2">
-                <div className="carousel">
+            <Container className="p-12 mt-2" >
+                <div className="carousel" >
                     <Carousel responsive={responsive} className="carousel__books" infinite={true}>
                         { books.map((book, index) => {
                             return (<CardCustom book={book} key={index}/>)
