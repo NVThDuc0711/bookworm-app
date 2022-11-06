@@ -26,7 +26,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #999;
+    background-color: #290b29;
+    color: yellow;
     span {
         cursor: pointer;
         font-size: 28px;
@@ -36,7 +37,8 @@
         height: 42px;
         width: 42px;
         border: none;
-        color: #000;
+        color: #290b29;
+        
     }
 }
 
@@ -46,8 +48,8 @@
         width: 100%;
         height: 42px;
         border: none;
-        background-color: #000;
-        color: #fff;
+        background-color: #290b29;
+        color: yellow;
         font-size: 1.2rem;
         font-weight: 600;
         cursor: pointer;

@@ -3,16 +3,17 @@
 
     .shop__filtermenu__body{
 
-        // Cursor
+        
         cursor: pointer;
-        // Hover effect
+        
         &:hover{
-            background-color: #f5f5f5;
+            background-color: yellow;
         }
     }
 
     .shop__filtermenu__body--active {
-        background-color: #f5f5f5;
+        background-color: #290b29;
+        color: yellow;
         cursor: pointer;
     }
     
@@ -23,12 +24,14 @@
 .shop__filtermenu__header {
 
     .accordion-button:focus {
-        border-color: #000;
+        background-color: #290b29;
+        color: yellow;
+        border-color: #290b29;
     }
 
     .accordion-button:not(.collapsed) {
-        color: #000;
-        background-color: #f5f5f5;
-        border-color: #f5f5f5;
+        color: yellow;
+        background-color: #290b29;
+        border-color: yellow;
     }
 }
