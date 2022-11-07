@@ -1,6 +1,6 @@
 .bookworm__featured{
-    margin-top: 24px;
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +16,7 @@
         justify-content: center;
         
         button {
+            margin-right: 50px;
             background-color: #290b29;
             color: yellow;
             font-size: 1.5rem;
@@ -34,6 +35,8 @@
         }
 
         .bookworm__featured__tab--active{
+            
+            
             background-color: #290b29;
             color: yellow;
             
